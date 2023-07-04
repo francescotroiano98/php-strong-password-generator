@@ -32,10 +32,13 @@
                         
                         for($i = 0; $i < $passwordsize; $i++){
 
-                            
-            
+                            $randomIndex = random_int(0, strlen($characters) - 1); //ad ogni iterazione voglio generare un numero da 0 a strlen($characters) - 1, così facendo avrò selezionato casualmente dal mio array: lettera minuscola o maiuscola o un simbolo o un numero.
+
+                            $password .= $characters[$randomIndex]; // con il .= posso concatenare ad ogni iterazione un carattere alla fine della mia stringa $password fino alla lunghezza ricevuta dal GET. 
                         }
-                }
+                        var_dump($password);
+            
+                    }
                     
 
                 
