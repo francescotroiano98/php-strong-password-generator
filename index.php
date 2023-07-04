@@ -27,13 +27,15 @@
                     } else {
 
                         $passwordsize = $_GET['passwordsize'];
+                        $characters = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=[]{}|;:,.<>?'];
+                        $password = '';
                         var_dump($passwordsize);
             
                     }
                     
 
                 
-                    $characters = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=[]{}|;:,.<>?'];
+                    
                 ?>
         </body>
 </html>
