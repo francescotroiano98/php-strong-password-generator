@@ -9,21 +9,34 @@
 
         <title>Password Generator</title>
     </head>
-        <body>
-                <form action="./index.php" method="GET">
-                    <input type="number" placeholder='Choose the size of password to generate' name="passwordsize">
+        <body class="pt-5 " style="background-color: #001632;">
+            <header class="container text-center">
+                <h1 style="color: white;">Strong Password generator</h1>
+                <h2 style="color: white;">Genera una password sicura</h2>
+            </header>
+              
+            <main class="container">
 
-                    <button type="submit">
-                        Generate Password
-                    </button>
-                </form>
+            <form action="./index.php" method="GET" class="py-5 bg-white container rounded-3">
+                    <div class="row mb-4 container d-flex align-items-center">
+                        <label style="color: black;" for="passwordnumbers" class="col-sm-2 col-form-label">Choose the size of password</label>
+                        <div class="col">
+                            <input type="number" class="form-control" id="passwordnumbers"  name="passwordsize">
+                        </div>
+                            <button type="submit" class="btn btn-primary col">Generate Password</button>
+                        <div>
 
-                
+            <?php
 
-                <?php
+                    if (empty($_GET['passwordsize']))  {
 
-                    if (empty($_GET['passwordsize'])) {
-                        echo 'Please select a number';
+                        
+                     ?>    
+                        <div class="alert alert-info" role="alert">
+                                 Please select a number
+                        </div>
+
+                <?php        
                     } else {
 
                         include_once __DIR__ . '/functions.php';
@@ -31,14 +44,19 @@
                         $passwordsize = $_GET['passwordsize'];
 
                         $password = generateRandomPassword($passwordsize);
+
                        
-                        echo "Generated Password: " . $password;
-            
-                    }
-                    
+                        
+                        
+                     } ?>
+
+                <h2> 
+                    <?php echo 'Password generated:' . ' ' . $password; ?></h2>    
+                </form>
+
+            </main>    
+                
 
                 
-                    
-                ?>
         </body>
 </html>
