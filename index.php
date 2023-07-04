@@ -29,6 +29,8 @@
                         include_once __DIR__ . '/functions.php';
 
                         $passwordsize = $_GET['passwordsize'];
+
+                        $password = generateRandomPassword($passwordsize);
                        
                         echo "Generated Password: " . $password;
             
