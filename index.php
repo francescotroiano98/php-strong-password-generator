@@ -25,8 +25,8 @@
                     if (empty($_GET['passwordsize'])) {
                         echo 'Please select a number';
                     } else {
-                        
-                        include '/functions.php';
+
+                        include_once __DIR__ . '/functions.php';
 
                         $passwordsize = $_GET['passwordsize'];
                        
