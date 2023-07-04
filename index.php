@@ -28,7 +28,7 @@
 
             <?php
 
-                    if (empty($_GET['passwordsize']))  {
+                    if (empty($_GET['passwordsize']) || $_GET['passwordsize'] < 1)  {
 
                         
                      ?>    
