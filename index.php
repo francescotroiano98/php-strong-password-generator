@@ -37,6 +37,7 @@
                             $password .= $characters[$randomIndex]; // con il .= posso concatenare ad ogni iterazione un carattere alla fine della mia stringa $password fino alla lunghezza ricevuta dal GET. 
                         }
                         var_dump($password);
+                        echo "Generated Password: " . $password;
             
                     }
                     
